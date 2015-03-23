@@ -42,12 +42,13 @@ void changeTxt(int size) {
 void button(int x, int y, char txt[]) {
 	float p[] = {
 		0 + x, 0 + y,
-		100 + x, 0 + y,
-		100 + x, 30 + y,
-		0 + x, 30 + y,
+		350 + x, 0 + y,
+		350 + x, 50 + y,
+		0 + x, 50 + y,
 		0 + x, 0 + y
 	};
-	ESAT::DrawSolidPath(p, 5, true);
+	ESAT::DrawPath(p, 5);
+	ESAT::DrawText(x+50, y+43, txt);
 }
 
 /* INDEX MENU */
@@ -56,8 +57,8 @@ void index() {
 	changeTxt(36);
 	ESAT::DrawText(150, 150, "USER ADMIN PANEL");
 	changeColor(0, 255, 255, 255);
-	changeColor(1, 255, 0, 0);
-	button(400, 300, "LOGIN");
+	changeColor(1, 99, 99, 99);
+	button(200, 250, "LOGIN");
 }
 
 int ESAT::main(int argc, char **argv){
